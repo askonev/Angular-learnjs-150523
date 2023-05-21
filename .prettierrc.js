@@ -1,6 +1,8 @@
 /**
+ * @format
  * @type {import('prettier').Config}
  */
+
 module.exports = {
 	trailingComma: 'all',
 	useTabs: true,
@@ -8,4 +10,6 @@ module.exports = {
 	semi: true,
 	singleQuote: true,
 	printWidth: 120,
+	insertPragma: true,
+	htmlWhitespaceSensitivity: 'css',
 };

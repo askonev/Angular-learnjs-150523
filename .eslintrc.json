@@ -1,6 +1,6 @@
 {
 	"root": true,
-	"ignorePatterns": ["projects/**/*", "src/**/*.test.ts", "src/frontend/generated/*"],
+	"ignorePatterns": ["projects/**/*", "dist/*"],
 	"overrides": [
 		{
 			"files": ["*.ts"],

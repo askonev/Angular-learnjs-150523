@@ -1,6 +1,6 @@
 {
 	"root": true,
-	"ignorePatterns": ["projects/**/*"],
+	"ignorePatterns": ["projects/**/*", "src/**/*.test.ts", "src/frontend/generated/*"],
 	"overrides": [
 		{
 			"files": ["*.ts"],
@@ -37,7 +37,9 @@
 							"match": true
 						}
 					}
-				]
+				],
+				"consistent-return": "error",
+				"no-console": "warn"
 			}
 		},
 		{

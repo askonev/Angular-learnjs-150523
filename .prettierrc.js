@@ -25,4 +25,14 @@ module.exports = {
         '$ANGULAR_TWO_WAY_BINDING',
         '$ANGULAR_OUTPUT',
     ],
+    overrides: [
+        {
+            files: ['*.html'],
+            options: {parser: 'html'},
+        },
+        {
+            files: ['*.component.html', '*.template.html'],
+            options: {parser: 'angular'},
+        },
+    ],
 };

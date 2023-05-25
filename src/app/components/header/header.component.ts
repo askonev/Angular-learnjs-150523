@@ -9,11 +9,8 @@ export class HeaderComponent {
     readonly title = 'Angular-learnjs-150523';
     readonly iconSrc = '../../../favicon.ico';
 
-    // iconWidth = 300;
-
-    onClick(event: Event) {
+    onMenuClick() {
         // eslint-disable-next-line no-console
-        console.log('Clicked', event);
-        // event.stopPropagation();
+        console.log('Menu click');
     }
 }

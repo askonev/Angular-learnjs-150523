@@ -15,5 +15,6 @@ export class HeaderComponent {
 
 	onClick(event: Event) {
 		console.log('click', event);
+		// event.stopPropagation();
 	}
 }

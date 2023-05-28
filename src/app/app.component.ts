@@ -9,6 +9,5 @@ import { Component } from '@angular/core';
 	interpolation: ['{{', '}}'],
 })
 export class AppComponent {
-	title = 'Angular-learnjs-150523';
 	window = window;
 }

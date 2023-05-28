@@ -1,7 +1,6 @@
 <app-header (click)="onClick()">Header</app-header>
 <!-- <h1>RED HEADER</h1> -->
-
 <!-- <p>Title is: {{title}}</p>
 <p>{{window.Promise.all}}</p>
 <p>{{12+34}}</p> -->
-  <input (keydown)="onKeydown($event)">
+<input (keydown.enter)="onKeydown()">

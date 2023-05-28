@@ -15,11 +15,7 @@ export class AppComponent {
 		console.log('Main click');
 	}
 
-	onKeydown(event: KeyboardEvent) {
-		// console.log('keydown', event);
-
-		if (event.key === 'Enter') {
-			console.log(event);
-		}
+	onKeydown() {
+		console.log('is Enter');
 	}
 }

@@ -1,10 +1,14 @@
 <mat-toolbar color="primary">
   <mat-toolbar-row>
     <!-- selector 'button[mat-icon-button]' селектор button icon компонента  -->
-    <img src="{{ iconSrc }}" class="shop-icon">
+    <!-- <img src="{{ iconSrc }}" class="shop-icon"> -->
+    <img [src]="iconSrc" [style.width.px]="iconWidth" [style.height.px]="40" class="shop-icon">
     <span>{{title}}</span>
     <span class="example-spacer"></span>
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+    <button
+        mat-icon-button
+        class="example-icon"
+        aria-label="Example icon-button with menu icon">
       <mat-icon>menu</mat-icon>
     </button>
   </mat-toolbar-row>
@@ -20,3 +24,16 @@
     </button>
   </mat-toolbar-row>
 </mat-toolbar>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+</body>
+</html>

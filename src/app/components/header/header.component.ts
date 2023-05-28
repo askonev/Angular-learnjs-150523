@@ -10,4 +10,6 @@ import { Component } from '@angular/core';
 export class HeaderComponent {
 	readonly title = 'Angular-learnjs-150523';
 	readonly iconSrc = 'https://cdn-icons-png.flaticon.com/512/234/234009.png';
+
+	iconWidth = 40;
 }

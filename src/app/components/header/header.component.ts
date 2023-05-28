@@ -12,4 +12,8 @@ export class HeaderComponent {
 	readonly iconSrc = 'https://cdn-icons-png.flaticon.com/512/234/234009.png';
 
 	iconWidth = 40;
+
+	onClick(event: Event) {
+		console.log('click', event);
+	}
 }

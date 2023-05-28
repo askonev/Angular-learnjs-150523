@@ -10,4 +10,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 	window = window;
+
+	onClick() {
+		console.log('Main click');
+	}
 }

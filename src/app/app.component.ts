@@ -9,11 +9,24 @@ import {applicationConfigMock} from './shared/application-config/application-con
 export class AppComponent {
     readonly applicationConfig = applicationConfigMock;
 
-    flag = false;
+    switchTemplate = false;
+    closeTemplate = true;
 
     constructor() {
         setTimeout(() => {
-            this.flag = !this.flag;
+            this.switchTemplate = !this.switchTemplate;
+            // or
+            // this.closeTemplate = !this.closeTemplate;
         }, 3000);
+        setTimeout(() => {
+            this.switchTemplate = !this.switchTemplate;
+            // or
+            // this.closeTemplate = !this.closeTemplate;
+        }, 6000);
+        setTimeout(() => {
+            this.switchTemplate = !this.switchTemplate;
+            // or
+            // this.closeTemplate = !this.closeTemplate;
+        }, 9000);
     }
 }

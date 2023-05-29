@@ -8,4 +8,12 @@ import {applicationConfigMock} from './shared/application-config/application-con
 })
 export class AppComponent {
     readonly applicationConfig = applicationConfigMock;
+
+    flag = false;
+
+    constructor() {
+        setTimeout(() => {
+            this.flag = !this.flag;
+        }, 3000);
+    }
 }

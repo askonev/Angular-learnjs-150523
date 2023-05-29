@@ -1,4 +1,18 @@
-import {Component, EventEmitter, Input, Output} from '@angular/core';
+import {
+    Component,
+    EventEmitter,
+    Input,
+    OnChanges,
+    Output,
+    SimpleChanges,
+    OnInit,
+    DoCheck,
+    AfterContentInit,
+    AfterContentChecked,
+    AfterViewInit,
+    AfterViewChecked,
+    OnDestroy,
+} from '@angular/core';
 import {IProduct} from '../../../shared/products/product.interface';
 
 @Component({
@@ -6,10 +20,76 @@ import {IProduct} from '../../../shared/products/product.interface';
     templateUrl: './card.component.html',
     styleUrls: ['./card.component.css'],
 })
-export class CardComponent {
+export class CardComponent
+    implements
+        OnChanges,
+        OnInit,
+        DoCheck,
+        AfterContentInit,
+        AfterContentChecked,
+        AfterViewInit,
+        AfterViewChecked,
+        OnDestroy
+{
     @Input() product: IProduct | undefined;
+    @Input() user: string | undefined;
 
     @Output() buy = new EventEmitter<IProduct['_id']>();
+
+    constructor() {
+        // eslint-disable-next-line no-console
+        console.log('constructor CardComponent');
+    }
+
+    ngOnChanges({product, user}: SimpleChanges): void {
+        // eslint-disable-next-line no-console
+        console.log('ngOnChanges CardComponent', product, user);
+
+        // // if (product && !(product.previousValue as IProduct) && product.currentValue) {
+        // // product.currentValue === this.product
+        // if (product && !(product.previousValue as IProduct) && this.product) {
+        //     // focus card
+        // }
+
+        // if (user) {
+        //     // focus user
+        // }
+    }
+
+    ngOnInit(): void {
+        // eslint-disable-next-line no-console
+        console.log('OnInit CardComponent');
+    }
+
+    ngDoCheck(): void {
+        // eslint-disable-next-line no-console
+        console.log('ngDoCheck CardComponent');
+    }
+
+    ngAfterContentInit(): void {
+        // eslint-disable-next-line no-console
+        console.log('ngAfterContentInit CardComponent');
+    }
+
+    ngAfterContentChecked(): void {
+        // eslint-disable-next-line no-console
+        console.log('ngAfterContentChecked CardComponent');
+    }
+
+    ngAfterViewInit(): void {
+        // eslint-disable-next-line no-console
+        console.log('ngAfterViewInit CardComponent');
+    }
+
+    ngAfterViewChecked(): void {
+        // eslint-disable-next-line no-console
+        console.log('ngAfterViewChecked CardComponent');
+    }
+
+    ngOnDestroy(): void {
+        // eslint-disable-next-line no-console
+        console.log('ngOnDestroy CardComponent');
+    }
 
     onProductBuy(event: Event) {
         event.stopPropagation();

@@ -6,3 +6,19 @@
     background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
     background-size: contain;
 }
+
+.example-card-title {
+    font-size: 10px;
+    margin: 0 8px;
+}
+
+.example-card-subtitle {
+    font-size: 8px;
+    color: black;
+    margin: 0 8px;
+}
+
+.example-card-button {
+    color: black;
+    margin: 0 8px;
+}

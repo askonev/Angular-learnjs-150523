@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import {applicationConfigMock} from './shared/application-config/application-config.mock';
 
 @Component({
     selector: 'app-root',
@@ -7,4 +8,6 @@ import {Component} from '@angular/core';
 })
 export class AppComponent {
     title = 'Angular-learnjs-150523';
+
+    readonly applicationConfig = applicationConfigMock;
 }

@@ -10,11 +10,11 @@ export class HeaderComponent {
     @Input() applicationConfig: IApplicationConfig | null = null;
 
     // eslint-disable-next-line @angular-eslint/no-output-rename
-    @Output('menu') menuClick = new EventEmitter<{clientX: number}>();
+    @Output() menuClickOutput = new EventEmitter<{clientX: number}>();
 
-    onMenuClick(event: MouseEvent) {
+    onMenuClickHeader(event: MouseEvent) {
         // eslint-disable-next-line no-console
         console.log('Menu click', event);
-        this.menuClick.emit({clientX: event.clientX}); // Эммитим значение родителю
+        this.menuClickOutput.emit({clientX: event.clientX}); // Эммитим значение родителю
     }
 }

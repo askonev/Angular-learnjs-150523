@@ -1,6 +1,8 @@
-<app-header [applicationConfig]="applicationConfig" (menu)="onMenuClick($event)"></app-header>
+<app-header
+    [applicationConfig]="applicationConfig"
+    (menuClickOutput)="onMenuClickApp($event)"
+></app-header>
 <!-- HeaderComponent(<app-header>).menuClick.subscribe($event => {
-  onMenuClick($event);
+  onMenuClickApp($event);
 })-->
 <app-products-list></app-products-list>
-k

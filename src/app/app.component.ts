@@ -9,9 +9,9 @@ import {applicationConfigMock} from './shared/application-config/application-con
 export class AppComponent {
     readonly applicationConfig = applicationConfigMock;
 
-    onMenuClick() {
+    onMenuClick(clientx: number) {
         // eslint-disable-next-line prettier/prettier
         // eslint-disable-next-line no-console
-        console.log('Menu click event app.component lvl');
+        console.log('Menu click event app.component lvl', clientx);
     }
 }

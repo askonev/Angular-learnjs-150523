@@ -9,7 +9,8 @@ import {IApplicationConfig} from '../../shared/application-config/application-co
 export class HeaderComponent {
     @Input() applicationConfig: IApplicationConfig | null = null;
 
-    @Output() menuClick = new EventEmitter<{clientX: number}>();
+    // eslint-disable-next-line @angular-eslint/no-output-rename
+    @Output('menu') menuClick = new EventEmitter<{clientX: number}>();
 
     onMenuClick(event: MouseEvent) {
         // eslint-disable-next-line no-console

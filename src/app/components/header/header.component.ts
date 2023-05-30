@@ -9,11 +9,11 @@ import {IApplicationConfig} from '../../shared/application-config/application-co
 export class HeaderComponent {
     @Input() applicationConfig: IApplicationConfig | null = null;
 
-    @Output() menuClick = new EventEmitter<number>();
+    @Output() menuClick = new EventEmitter<{clientX: number}>();
 
     onMenuClick(event: MouseEvent) {
         // eslint-disable-next-line no-console
         console.log('Menu click', event);
-        this.menuClick.emit(event.clientX); // Эммитим значение родителю
+        this.menuClick.emit({clientX: event.clientX}); // Эммитим значение родителю
     }
 }

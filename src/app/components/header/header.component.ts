@@ -7,7 +7,8 @@ import {IApplicationConfig} from '../../shared/application-config/application-co
     styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent {
-    @Input() applicationConfig: IApplicationConfig | null = null;
+    // eslint-disable-next-line @angular-eslint/no-input-rename
+    @Input('config') applicationConfig: IApplicationConfig | null = null;
 
     onMenuClick() {
         // eslint-disable-next-line no-console

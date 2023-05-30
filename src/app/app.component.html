@@ -1,2 +1,5 @@
-<app-header [config]="applicationConfig"></app-header>
+<app-header [applicationConfig]="applicationConfig" (menuClick)="onMenuClick()"></app-header>
+<!-- HeaderComponent(<app-header>).menuClick.subscribe() => {
+  onMenuClick();
+}-->
 <app-products-list></app-products-list>

@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {IApplicationConfig} from '../../shared/application-config/application-config.interface';
 
 @Component({
@@ -7,11 +7,13 @@ import {IApplicationConfig} from '../../shared/application-config/application-co
     styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent {
-    // eslint-disable-next-line @angular-eslint/no-input-rename
-    @Input('config') applicationConfig: IApplicationConfig | null = null;
+    @Input() applicationConfig: IApplicationConfig | null = null;
+
+    @Output() menuClick = new EventEmitter<void>();
 
     onMenuClick() {
         // eslint-disable-next-line no-console
         console.log('Menu click');
+        this.menuClick.emit(); // Эммитим значение родителю
     }
 }

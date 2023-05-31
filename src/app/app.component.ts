@@ -9,9 +9,12 @@ import {applicationConfigMock} from './shared/application-config/application-con
 export class AppComponent {
     readonly applicationConfig = applicationConfigMock;
 
+    isSidenavOpenedApp = false;
+
     onMenuClickApp(clientXobj: {clientX: number}) {
         // eslint-disable-next-line prettier/prettier
         // eslint-disable-next-line no-console
         console.log('Menu click event app.component lvl', clientXobj);
+        this.isSidenavOpenedApp = !this.isSidenavOpenedApp;
     }
 }

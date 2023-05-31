@@ -3,7 +3,8 @@
         <p>Auto-resizing sidenav</p>
     </mat-drawer>
 
-    <div class="example-sidenav-content">
+    <div #divElement class="example-sidenav-content">
+        {{ divElement.classList.toString }}
         <button type="button" mat-button (click)="toggleSidenavOpened()">Toggle sidenav</button>
     </div>
 </mat-drawer-container>

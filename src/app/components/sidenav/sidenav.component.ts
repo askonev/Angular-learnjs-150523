@@ -1,4 +1,5 @@
-import {Component, EventEmitter, Input, Output} from '@angular/core';
+import {Component, EventEmitter, Input, Output, ViewChild} from '@angular/core';
+import {MatDrawer} from '@angular/material/sidenav';
 
 @Component({
     selector: 'app-sidenav',
@@ -12,8 +13,10 @@ export class SidenavComponent {
     // outputName = [inputName] + 'Change'
     @Output() isSidenavOpenedChildChange = new EventEmitter<boolean>();
 
+    @ViewChild('drawer') private readonly matDrawerComponent: MatDrawer | undefined;
+
     toggleSidenavOpened() {
-        // this.isSidenavOpenedChild = !this.isSidenavOpenedChild;
         this.isSidenavOpenedChildChange.emit(!this.isSidenavOpenedChild);
+        this.matDrawerComponent?.toggle();
     }
 }

@@ -1,6 +1,6 @@
 <app-header
     [applicationConfig]="applicationConfig"
-    (menuClickOutput)="onMenuClickApp($event)"
+    (menuClickOutput)="sidenav.toggleSidenavOpened()"
 ></app-header>
 <!-- HeaderComponent(<app-header>).menuClick.subscribe($event => {
   onMenuClickApp($event);
@@ -11,4 +11,4 @@
     [isSidenavOpenedChild]="isSidenavOpenedApp"
     (isSidenavOpenedChildChange)="isSidenavOpenedApp = $event"
 ></app-sidenav> -->
-<app-sidenav [(isSidenavOpenedChild)]="isSidenavOpenedApp"></app-sidenav>
+<app-sidenav #sidenav [(isSidenavOpenedChild)]="isSidenavOpenedApp"></app-sidenav>

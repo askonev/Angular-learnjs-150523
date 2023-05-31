@@ -6,8 +6,10 @@ import {Component, EventEmitter, Input, Output} from '@angular/core';
     styleUrls: ['./sidenav.component.css'],
 })
 export class SidenavComponent {
+    // inputName - isSidenavOpenedChild
     @Input() isSidenavOpenedChild = false;
 
+    // outputName = [inputName] + 'Change'
     @Output() isSidenavOpenedChildChange = new EventEmitter<boolean>();
 
     toggleSidenavOpened() {

@@ -13,9 +13,14 @@ export class SidenavComponent implements OnInit, AfterViewInit {
     @ViewChild('test', {static: false})
     private readonly test: ElementRef | undefined;
 
+    @ViewChild('testStatic', {static: true})
+    private readonly testStatic: ElementRef | undefined;
+
     ngOnInit(): void {
         // eslint-disable-next-line no-console
         console.log('OnInit', this.test);
+        // eslint-disable-next-line no-console
+        console.log('OnInit', this.testStatic);
     }
 
     ngAfterViewInit(): void {

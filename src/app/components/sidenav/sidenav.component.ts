@@ -1,12 +1,4 @@
-import {
-    Component,
-    Input,
-    OnChanges,
-    SimpleChanges,
-    TemplateRef,
-    ViewChild,
-    ViewContainerRef,
-} from '@angular/core';
+import {Component, Input, TemplateRef, ViewChild, ViewContainerRef} from '@angular/core';
 import {MatDrawer} from '@angular/material/sidenav';
 
 @Component({
@@ -14,8 +6,10 @@ import {MatDrawer} from '@angular/material/sidenav';
     templateUrl: './sidenav.component.html',
     styleUrls: ['./sidenav.component.css'],
 })
-export class SidenavComponent implements OnChanges {
-    @Input() listTemplate!: TemplateRef<unknown>;
+export class SidenavComponent {
+    @Input() set listTemplate(template: TemplateRef<unknown>) {
+        this.insertListTemplate(template);
+    }
 
     @ViewChild(MatDrawer, {static: true})
     private readonly matDrawerComponent: MatDrawer | undefined;
@@ -23,14 +17,14 @@ export class SidenavComponent implements OnChanges {
     @ViewChild('listViewpotr', {read: ViewContainerRef, static: true})
     private readonly listViewpotr!: ViewContainerRef;
 
-    ngOnChanges({listTemplate}: SimpleChanges): void {
-        if (listTemplate) {
-            this.insertListTemplate();
-        }
-    }
+    // ngOnChanges({listTemplate}: SimpleChanges): void {
+    //     if (listTemplate) {
+    //         this.insertListTemplate();
+    //     }
+    // }
 
-    private insertListTemplate() {
-        this.listViewpotr.createEmbeddedView(this.listTemplate);
+    private insertListTemplate(listTemplate: TemplateRef<unknown>) {
+        this.listViewpotr.createEmbeddedView(listTemplate);
     }
 
     // @ViewChild('test', {static: false})

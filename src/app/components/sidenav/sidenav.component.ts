@@ -1,11 +1,4 @@
-import {
-    Component,
-    ContentChild,
-    OnInit,
-    TemplateRef,
-    ViewChild,
-    ViewContainerRef,
-} from '@angular/core';
+import {Component, TemplateRef, ViewChild, ViewContainerRef} from '@angular/core';
 import {MatDrawer} from '@angular/material/sidenav';
 
 @Component({
@@ -13,7 +6,7 @@ import {MatDrawer} from '@angular/material/sidenav';
     templateUrl: './sidenav.component.html',
     styleUrls: ['./sidenav.component.css'],
 })
-export class SidenavComponent implements OnInit {
+export class SidenavComponent {
     // @Input() set listTemplate(template: TemplateRef<unknown>) {
     //     this.insertListTemplate(template);
     // }
@@ -27,12 +20,12 @@ export class SidenavComponent implements OnInit {
     // @ContentChild(MatList, {static: true})
     // private readonly matList!: MatList;
 
-    @ContentChild('listTemplate', {static: true})
-    private readonly listTemplate!: TemplateRef<unknown>;
+    // @ContentChild('listTemplate', {static: true})
+    // private readonly listTemplate!: TemplateRef<unknown>;
 
-    ngOnInit(): void {
-        this.insertListTemplate(this.listTemplate);
-    }
+    // ngOnInit(): void {
+    //     this.insertListTemplate(this.listTemplate);
+    // }
 
     // ngOnChanges({listTemplate}: SimpleChanges): void {
     //     if (listTemplate) {

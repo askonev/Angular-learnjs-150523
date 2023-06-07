@@ -4,16 +4,20 @@
 ></app-header>
 
 <app-sidenav #sidenav>
-    <ng-template #listTemplate>
+    <!-- <ng-template #listTemplate> -->
+    <div ngProjectAs="drawer-contant">
         <h2>{{ applicationConfig.title }}</h2>
-        <!-- <div> -->
+        <p>paragraph</p>
+    </div>
+    <div ngProjectAs="content">
+        <p>list</p>
         <mat-list role="list">
             <mat-list-item role="listitem">Item 1</mat-list-item>
             <mat-list-item role="listitem">Item 2</mat-list-item>
             <mat-list-item role="listitem">Item 3</mat-list-item>
         </mat-list>
-        <!-- </div> -->
-    </ng-template>
+    </div>
+    <!-- </ng-template> -->
 </app-sidenav>
 
 <!-- <ng-template #listTemplate>

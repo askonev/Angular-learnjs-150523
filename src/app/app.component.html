@@ -2,15 +2,26 @@
     [applicationConfig]="applicationConfig"
     (menuClickOutput)="sidenav.toggleSidenavOpened()"
 ></app-header>
-<app-sidenav #sidenav [listTemplate]="listTemplate"></app-sidenav>
 
-<ng-template #listTemplate>
+<app-sidenav #sidenav>
+    <ng-template #listTemplate>
+        <h2>{{ applicationConfig.title }}</h2>
+        <!-- <div> -->
+        <mat-list role="list">
+            <mat-list-item role="listitem">Item 1</mat-list-item>
+            <mat-list-item role="listitem">Item 2</mat-list-item>
+            <mat-list-item role="listitem">Item 3</mat-list-item>
+        </mat-list>
+        <!-- </div> -->
+    </ng-template>
+</app-sidenav>
+
+<!-- <ng-template #listTemplate>
     <h2>{{ applicationConfig.title }}</h2>
     <mat-list role="list">
         <mat-list-item role="listitem">Item 1</mat-list-item>
         <mat-list-item role="listitem">Item 2</mat-list-item>
         <mat-list-item role="listitem">Item 3</mat-list-item>
     </mat-list>
-</ng-template>
-
+</ng-template> -->
 <!-- <app-products-list></app-products-list> -->
